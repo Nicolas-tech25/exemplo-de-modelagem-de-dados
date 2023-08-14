@@ -18,3 +18,6 @@
  ### n:m
 
  Relacionamento do tipo **n para m**, ou seja, **vários para vários**.
+
+## exercicio resolvido
+!["modelo lógico do sistema de vendas](filmes.png)
