@@ -43,7 +43,7 @@ ALTER TABLE produtos
     -- aponta para a chave-primária (id) de outra tabela(fabricante)
     FOREIGN KEY (fabricante_id) REFERENCES fabricantes(id);
 ```
-
+   
 ### Exemplos de alterações estruturais  na tabela
 
 ### Renomear tabela
