@@ -143,3 +143,34 @@ WHERE descricao  LIKE '%tela%' OR nome LIKE '%tela%';
 
 -- BUSCA em palavra indicada a qualquer posição no texto
 ```
+
+### Operações e funções de agregação
+
+```SQL
+SELECT SUM(preco) as Total  FROM produtos;
+
+SELECT nome as Produto, preco as "Preço" FROM produtos;
+SELECT nome Produto, preco "Preço" FROM produtos;
+
+-- MÉDIA
+SELECT AVG(preco) as "Média dos Preços" FROM produtos; 
+SELECT ROUND(AVG(preco), 2) as "Média dos Preços" FROM produtos; 
+
+-- CONTAGEM 
+SELECT COUNT(id) as "Qtd de Produtos" FROM produtos;
+SELECT COUNT(DISTINCT fabricante_id) as "Qtd de Fabricantes com Produtos" FROM produtos;
+
+-- distinct É UMA CLÁUSULA/FLAG que evita a duplicidade na contagem de registros
+```
+
+
+### Oprações matemáticas
+
+```SQL
+SELECT  nome, preco, quantidade, (preco * quantidade) as Total FROM produtos;
+```
+
+### Segmentação/Agrupamento de resultados
+```SQL
+SELECT fabricante_id, SUM(preco) FROM produtos GROUP BY fabricante_id;
+```
