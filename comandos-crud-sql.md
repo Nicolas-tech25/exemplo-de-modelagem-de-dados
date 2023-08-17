@@ -100,3 +100,46 @@ WHERE NOT fabricante_id = 8;
 SELECT nome, descricao, preco FROM produtos
 WHERE NOT fabricante_id  != 8;
 ```
+
+### UPDATE
+
+```SQL
+UPDATE produtos SET preco = 6549.74
+WHERE id =4;
+
+-- Altere a quantidade dos produtos da apple e da sansung para 20
+
+UPDATE produtos SET quantidade = 20
+WHERE fabricante_id = 3 OR fabricante_id =5;
+```
+
+---
+## DELETE
+
+```SQL
+DELETE FROM fabricante WHERE id=1;
+DELETE FROM fabricante WHERE id=4;
+```
+
+## SELECT: outras formas de uso
+
+### Cassificando
+```SQL
+SELECT nome, preco FROM ORDER BY nome;
+SELECT nome, preco FROM ORDER BY preco;
+SELECT nome, preco FROM ORDER BY preco DESC;
+
+-- DESC: CLASSIFICAÇÃO EM ORDEM DECRECENTE
+-- ASC: CRECENTE
+
+SELECT nome, preco FROM produtos 
+WHERE quantidade = 20 ORDER BY nome;
+```
+
+### BUSCA DE DADOS 
+```SQL
+SELECT nome, descricao FROM produtos
+WHERE descricao  LIKE '%tela%' OR nome LIKE '%tela%';
+
+-- BUSCA em palavra indicada a qualquer posição no texto
+```
