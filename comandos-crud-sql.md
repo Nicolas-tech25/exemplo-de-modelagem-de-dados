@@ -217,4 +217,29 @@ SELECT
 FROM produtos INNER JOIN fabricante
 ON produtos.fabricante_id = fabricante.id
 GROUP BY fabricante;
+ORDER BY total;
+```
+
+### Desafio 1: Trazer a quantidade de produtos de cada fabricante e a soma da quantidade/estoque destes produtos
+
+```SQL
+SELECT 
+    fabricante.nome AS fabricante, 
+      SUM(produtos.quantidade) AS "QTD de estoque",
+COUNT(produtos.id) AS "QTD de produtos"
+    FROM produtos INNER JOIN fabricante
+ON produtos.fabricante_id = fabricante.id
+GROUP BY fabricante;
+```
+
+### Desafio 2: Trazer a quantidade de produtos de cada fabricante e a soma da quantidade/estoque destes produtos, SOMENTE dos fabricantes que NÃO POSSUEM produtos
+
+```SQL
+SELECT 
+    fabricante.nome AS fabricante, 
+      SUM(produtos.quantidade) AS "QTD de estoque",
+COUNT(produtos.id) AS "QTD de produtos"
+    FROM produtos RIGHT JOIN fabricante
+ON produtos.fabricante_id = fabricante.id
+GROUP BY fabricante;
 ```
