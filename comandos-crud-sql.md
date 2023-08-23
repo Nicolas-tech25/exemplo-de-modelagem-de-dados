@@ -164,7 +164,7 @@ SELECT COUNT(DISTINCT fabricante_id) as "Qtd de Fabricantes com Produtos" FROM p
 ```
 
 
-### Oprações matemáticas
+### Operações matemáticas
 
 ```SQL
 SELECT  nome, preco, quantidade, (preco * quantidade) as Total FROM produtos;
